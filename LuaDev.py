@@ -156,8 +156,9 @@ async def on_message_delete(message):
     if message.author.id != client.user.id:
         channel = discord.Object(id=485103216212836355)
         embed=discord.Embed(description=str(message.content))
+        embed.add_field(name="**Message:**" , value=str(message.content), inline=False)
         embed.set_author(name=str(message.author), icon_url=str(message.author.avatar_url))
-        embed.set_footer(text="Deleted message in "+str(message.channel)+" at "+now.strftime("%Y/%m/%d %H:%M:%S"))
+        embed.set_footer(text="Deleted message in <"+str(message.channel.id)+"> at "+now.strftime("%Y/%m/%d %H:%M:%S"))
         await client.send_message(channel, embed=embed)
 
 client.run('NDg0NDkyMDI2NTQxMjQ0NDI4.Dmi1gQ.mbPIA1wdo7XXzoPSksrwF3oqvmQ')
