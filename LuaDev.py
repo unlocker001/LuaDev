@@ -59,7 +59,7 @@ async def on_message(message):
             embed.set_footer(text=now.strftime("%Y/%m/%d %H:%M:%S"))
             await client.send_message(message.author, embed=embed)
             await client.delete_message(message)
-            embed=discord.Embed(color=0x000080)
+            embed=discord.Embed(title="<:Lua:484461968640573450> AR Lua Developers", color=0x000080)
             embed.set_author(name=str(message.author), icon_url=str(message.author.avatar_url))
             embed.add_field(name="طالب جديد", value=":books: !لقد انضم طالب جديد للخادم رحبوا به", inline=False)
             embed.set_footer(text=now.strftime("%Y/%m/%d %H:%M:%S"))
@@ -138,12 +138,6 @@ async def on_message(message):
                     #error = error[error.find('File "<string>"'):]
                     await client.send_message(message.channel, "```"+str(error)+"```")
                     clear()
-        else:
-            embed=discord.Embed(title="<:Lua:484461968640573450> AR Lua Developers", color=0x000080)
-            embed.add_field(name=":مُلاحظة", value="<#484820738830761984> يُمكنك فقط تشغيل سكربتات لوا في قناة\nللدردشة <#484460318941118486> يرجى استخدام قناة", inline=False)
-            embed.set_footer(text=now.strftime("%Y/%m/%d %H:%M:%S"))
-            await client.send_message(message.author, embed=embed)
-            await client.delete_message(message)
 
     if message.content.startswith('!help'):
         embed=discord.Embed(title="<:Lua:484461968640573450> AR Lua Developers", color=0x000080)
